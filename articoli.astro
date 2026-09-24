@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+const articles = [
+  {tag:"Universo", title:"Perché le stelle brillano?", text:"Un esempio di articolo: qui inseriremo i tuoi contenuti reali."},
+  {tag:"Sistema Solare", title:"Il nostro quartiere cosmico", text:"Un esempio di articolo pronto per essere sostituito."},
+  {tag:"Curiosità", title:"5 cose sorprendenti sullo spazio", text:"Una struttura semplice per rendere gli articoli piacevoli da leggere."}
+];
+---
+<Layout title="Articoli — AstroMarco">
+  <section class="section">
+    <span class="kicker">Articoli</span>
+    <h1>Il mondo di AstroMarco.</h1>
+    <p class="sub">Approfondimenti e curiosità per scoprire l'universo senza complicarlo.</p>
+    <div class="grid">
+      {articles.map(a => <article class="card"><div><span class="tag">{a.tag}</span><h3>{a.title}</h3><p>{a.text}</p></div><span class="arrow">Leggi →</span></article>)}
+    </div>
+  </section>
+</Layout>
